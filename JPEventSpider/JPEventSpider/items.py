@@ -10,5 +10,7 @@ import scrapy
 
 class JpeventspiderItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    type = scrapy.Field()
+    date = scrapy.Field()
+    start = scrapy.Field()
