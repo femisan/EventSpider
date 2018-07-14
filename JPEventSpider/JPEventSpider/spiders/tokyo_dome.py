@@ -11,8 +11,6 @@ class TokyoDome(scrapy.Spider):
     ]
 
     def parse(self,response):
-        item = JpeventspiderItem()
-
         event_date = []
         event_type = []
         event_name = []
@@ -58,7 +56,7 @@ class TokyoDome(scrapy.Spider):
                         start_time = ''
                     print (start_time)
                     event_start.append(start_time)
-
+        item = JpeventspiderItem()
         item['name'] = event_name
         item['type'] = event_type
         item['start'] = event_start
